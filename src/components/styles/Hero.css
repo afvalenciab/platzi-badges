@@ -13,6 +13,8 @@ figure {
 
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .Badge__hero.Badges__list {
@@ -20,4 +22,8 @@ figure {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.Badge__hero img {
+  height: 100px;
 }

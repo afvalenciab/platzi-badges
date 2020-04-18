@@ -1,8 +1,9 @@
 import React from 'react';
-import twitterLogo from '../assets/images/twitter.svg';
+import twitterLogo from 'assets/images/twitter.svg';
 import './styles/BadgeItemList.css';
 
 class BadgeItemList extends React.Component {
+
   render() {
     const { firstName, lastName, twitter, jobTitle, avatarUrl } = this.props;
     return (

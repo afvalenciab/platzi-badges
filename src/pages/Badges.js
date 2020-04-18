@@ -1,16 +1,15 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
-import Hero from '../components/Hero';
-import BadgesList from '../components/BadgesList';
+import Hero from 'components/Hero';
+import BadgesList from 'components/BadgesList';
+import badgeHeader from '../assets/images/badge-header.svg';
 
 class Badges extends React.Component {
   render() {
     return (
-      <div>
-        <Navbar />
-        <Hero className='Badges__list' />
+      <>
+        <Hero logo={badgeHeader} className='Badges__list' />
         <BadgesList />
-      </div>
+      </>
     );
   }
 }

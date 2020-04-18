@@ -1,5 +1,5 @@
 .Navbar {
-  width: 100%;
+  min-width: 100vw;
   padding: 0.5rem 0;
   background-color: #1c3643;
 }

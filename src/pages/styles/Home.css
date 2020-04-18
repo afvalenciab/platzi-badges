@@ -1,0 +1,38 @@
+.Home-container {
+  display: flex;
+  min-width: 100vw;
+  min-height: calc(100vh - 76px);
+  justify-content: center;
+  align-items: center;
+  background: url(../../assets/images/stars.svg), #1b1b25;
+  background-repeat: repeat;
+  color: #fff;
+}
+
+.Home-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  box-sizing: border-box;
+}
+
+.Home-figure-conf {
+  margin-bottom: 30px;
+}
+
+.Home-figure-conf img {
+  width: 250px;
+}
+
+.Home-info h1 {
+  font-size: 33px;
+  width: 100%;
+  letter-spacing: 0.6px;
+}
+
+.Home-img-logo {
+  margin: 0;
+  padding: 0 20px;
+  width: 550px;
+}

@@ -7,9 +7,11 @@ import platziConfLogo from 'assets/images/platziconf-logo.svg';
 import PageLoading from '../components/PageLoading';
 import api from 'utils';
 
-class BadgeNew extends React.Component {
+class BadgeEdit extends React.Component {
+  badgeId = this.props.match.params.badgeId;
+
   state = {
-    loading: false,
+    loading: true,
     error: null,
     form: {
       firstName: '',
@@ -19,6 +21,24 @@ class BadgeNew extends React.Component {
       twitter: '',
     }
   };
+
+  componentDidMount() {
+    this.fetchData();
+  }
+
+  fetchData = async () => {
+    this.setState({ loading: true, error: null });
+
+    try {
+      const badgeData = await api.badges.read(this.badgeId);
+      this.setState({
+        loading: false,
+        form: badgeData
+      })
+    } catch (error) {
+      this.setState({ loading: false, error: error });
+    }
+  }
 
   handleChange = (e) => {
     this.setState({
@@ -32,8 +52,6 @@ class BadgeNew extends React.Component {
   handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log('Entro al click');
-
     const form = {
       ...this.state.form,
       avatarUrl: `https://www.gravatar.com/avatar/${md5(this.state.form.email)}?d=identicon`,
@@ -41,7 +59,7 @@ class BadgeNew extends React.Component {
 
     this.setState({ loading: true, error: null });
     try {
-      await api.badges.create(form);
+      await api.badges.update(this.badgeId, form);
       this.setState({ loading: false });
 
       this.props.history.push('/badges');
@@ -71,7 +89,7 @@ class BadgeNew extends React.Component {
 
             <div className="col-6 mb-3">
               <BadgeForm
-                title="New Attendant"
+                title="Edit Attendant"
                 onChange={this.handleChange}
                 onSubmit={this.handleSubmit}
                 formValues={form}
@@ -85,4 +103,4 @@ class BadgeNew extends React.Component {
   }
 }
 
-export default BadgeNew
+export default BadgeEdit

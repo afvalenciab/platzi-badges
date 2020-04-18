@@ -1,12 +1,24 @@
 .Badge-item-container {
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 18px;
   background-color: #fff;
   margin: 8px 0;
   border-radius: 5px;
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.4);
   box-sizing: border-box;
+}
+
+.Badge-item-container:hover {
+  background: rgba(0, 0, 0, 0.01);
+}
+
+.Badge-item-container:active {
+  transform: scale(0.98);
+}
+
+.Badge-item-figure {
+  margin: 0;
 }
 
 .Badge-item-figure img {

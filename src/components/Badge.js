@@ -3,12 +3,17 @@ import React from 'react';
 import md5 from 'md5';
 
 import './styles/Badge.css';
-import confLogo from '../assets/images/badge-header.svg';
+import confLogo from 'assets/images/badge-header.svg';
 
 class Badge extends React.Component {
   render() {
-    const { firstName, lastName, email, jobTitle, twitter } = this.props;
-    const avatarUrl = email ? `https://s.gravatar.com/avatar/${md5(email)}` : 'https://s.gravatar.com/avatar';
+    const firstName = this.props.firstName || 'FIRST_NAME';
+    const lastName = this.props.lastName || 'LAST_NAME';
+    const email = this.props.email || 'EMAIL';
+    const jobTitle = this.props.jobTitle || 'JOB_TITLE';
+    const twitter = this.props.twitter || 'twitter';
+
+    const avatarUrl = email ? `https://www.gravatar.com/avatar/${md5(email)}?d=identicon` : 'https://s.gravatar.com/avatar';
 
     return (
       <div className="Badge">

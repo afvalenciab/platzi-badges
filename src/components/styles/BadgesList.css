@@ -10,3 +10,10 @@
   justify-content: flex-end;
   margin-bottom: 1rem;
 }
+
+.Badges-not-found-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
