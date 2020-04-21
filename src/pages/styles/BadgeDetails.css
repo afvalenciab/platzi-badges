@@ -1,0 +1,15 @@
+.Badge-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Badge-item {
+  width: 500px;
+}
+
+.Badge-actions {
+  display: flex;
+  flex-direction: column;
+  margin: 0 40px 0 60px;
+}

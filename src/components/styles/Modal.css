@@ -1,0 +1,35 @@
+.Modal {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.Modal-container {
+  position: relative;
+  background: #fff;
+  padding: 25px;
+  border-radius: 5px;
+}
+
+.Modal-bottom_close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.Modal-bottom_close:hover {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.Modal-bottom_close:active {
+  transform: scale(0.92);
+}

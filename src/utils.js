@@ -36,7 +36,7 @@ const api = {
     remove(badgeId) {
       return callApi(`/badges/${badgeId}`, {
         method: 'DELETE',
-      })
+      });
     }
   }
 }
